@@ -98,7 +98,7 @@ uint32_t tmr23_get(void) {
 	do {
 		msw = TIM3->CNT;				//read the msw
 		lsw = TIM2->CNT;				//read the lsw
-	} while (msw == TIM3->CNT);			//see if overflow has taken place
+	} while (msw != TIM3->CNT);			//see if overflow has taken place
 	return (msw << 16) | lsw;			//return 32-bit time
 }
 
