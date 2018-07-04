@@ -131,6 +131,6 @@ uint64_t tim234_get(void) {
 		midw= TIM3->CNT;
 		lsw = TIM2->CNT;				//read the lsw
 	} while ((msw != TIM4->CNT) | (midw != TIM3->CNT));			//see if overflow has taken place
-	return ((uint64_t) msw << 32) | ((uint32_t) midw << 16) | lsw;			//return 32-bit time
+	return (((uint64_t) msw << 32)) | ((uint32_t) midw << 16) | lsw;			//return 32-bit time
 }
 
