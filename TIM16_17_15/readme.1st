@@ -1,1 +1,3 @@
 examples to show how TIM16/17 can be configured as masters to drive TIM15 to form 32-bit composite timers.
+
+more information here: https://dannyelectronics.wordpress.com/2018/07/04/composite-timers-continued/
